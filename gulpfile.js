@@ -38,12 +38,7 @@ gulp.task('sass', function() {
 gulp.task('css', function(){
 	return gulp.src('dev/**/*.css')
             .pipe(plumber({errorHandler: notify.onError('Error: <%= error.message %>')}))
-			.pipe(cleancss())
-            .pipe(header(notes, { pkg : pkg } ))
-            .pipe(rev())
             .pipe(gulp.dest(dest))
-            .pipe(rev.manifest())
-            .pipe(gulp.dest('./rev/css'))
             .pipe(livereload());
 });
 
