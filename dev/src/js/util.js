@@ -7,6 +7,8 @@ $(function() {
 				that.headerNavBind();
 
 				that.bannerSliderInit();
+
+				that.joinusMaskBind();
 			},
 
 			// 鼠标移到导航连接上的动画
@@ -50,6 +52,22 @@ $(function() {
 				    paginationClickable: true,
 				    nextButton: '.swiper-button-next',
 				    prevButton: '.swiper-button-prev',
+				});
+			},
+
+			// 投递简历
+			joinusMaskBind: function() {
+				var btnRecruit = $(".recruit-item .button"),
+					maskRecruit = $(".mask-recruit");
+
+				btnRecruit.on("click", function() {
+					maskRecruit.fadeIn(200).addClass("mask-show");
+				});
+
+				maskRecruit.on("click", function(n) {
+					if("SECTION" == n.target.nodeName && "mask-recruit mask-show" == n.target.className) {
+						maskRecruit.removeClass("mask-show").fadeOut(200);
+					} 
 				});
 			}
 		};
