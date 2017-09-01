@@ -45,6 +45,10 @@ $(function() {
 
 			// banner 轮播图
 			bannerSliderInit: function() {
+				if($('.swiper-container').length == 0) {
+					return false;
+				}
+				
 				var bannerSwiper = new Swiper ('.swiper-container', {
 				    direction: 'horizontal',
 				    loop: true,
