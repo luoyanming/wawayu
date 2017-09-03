@@ -6,7 +6,7 @@
 		<meta name="renderer" content="webkit">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="Cache-Control" content="max-age=86400" />
-		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+		<link rel="shortcut icon" href="./src/img/favicon.ico" type="image/x-icon">
 		<meta name="description" content="">
 		<meta name="keywords" content="">
 		<title>娃娃鱼</title>
@@ -19,8 +19,12 @@
 			<div class="container">
 				<a href="./index.html" class="logo"></a>
 
+				<!-- 第i个nav是选中的，nav上加.nav-i。 例：招聘是第6个，则nav上加class：nav-6 -->
 				<nav class="nav nav-1">
 					<ul>
+						<!--  漫画\动画\影视 三个页面和详情页都长一致-->
+						<!-- 可以通过跳转链接后面带参区分，也可以直接拷贝复制cartoon.html -->
+						<!-- 当前页的nav选中效果是.nav-item的class里面加.current -->
 						<li><a href="./index.html" class="nav-item current" title="首页">首页</a></li>
 						<li><a href="./cartoon.html?type=1" class="nav-item" title="漫画">漫画</a></li>
 						<li><a href="./cartoon.html?type=2" class="nav-item" title="动画">动画</a></li>
@@ -35,9 +39,10 @@
 		<section class="banner">
 			<div class="swiper-container">
 			    <div class="swiper-wrapper">
-			        <div class="swiper-slide"><a href="javascript:void(0);"><img src="./src/img/default.jpg"></a></div>
-			        <div class="swiper-slide"><a href="javascript:void(0);"><img src="./src/img/default.jpg"></a></div>
-			        <div class="swiper-slide"><a href="javascript:void(0);"><img src="./src/img/default.jpg"></a></div>
+			    	<!-- img标签里的 data-original 是需要展示的图片的路径；src里面的是默认图的路径-->
+			        <div class="swiper-slide"><a href="javascript:void(0);"><img class="lazy" data-original="./src/img/default.jpg" src="./src/img/1600x650.jpg"></a></div>
+			        <div class="swiper-slide"><a href="javascript:void(0);"><img class="lazy" data-original="./src/img/default.jpg" src="./src/img/1600x650.jpg"></a></div>
+			        <div class="swiper-slide"><a href="javascript:void(0);"><img class="lazy" data-original="./src/img/default.jpg" src="./src/img/1600x650.jpg"></a></div>
 			    </div>
 
 			    <div class="swiper-pagination"></div>
@@ -52,8 +57,9 @@
 				<h1 class="title">动画</h1>
 				<h4 class="tips">Animation</h4>
 				<div class="product-box flex-h">
+					<!-- 第一张大图有额外样式 .product-big-item  -->
 					<div class="product-item product-big-item">
-						<img src="./src/img/default.jpg">
+						<img class="lazy" data-original="./src/img/default.jpg" src="./src/img/800x540.jpg">
 						<a href="javascript:void(0);" class="flex-v-c">
 							<div class="text">
 								<h2 class="name">蜀山奇侠录</h2>
@@ -61,10 +67,12 @@
 							</div>
 						</a>
 					</div>
+					<!-- w5 5像素留白 -->
 					<div class="w5"></div>
 					<div class="flex-a-i">
+						<!-- 小图有额外样式 .product-small-item  -->
 						<div class="product-item product-small-item">
-							<img src="./src/img/default.jpg">
+							<img class="lazy" data-original="./src/img/default.jpg" src="./src/img/395x267.jpg">
 							<a href="javascript:void(0);" class="flex-v-c">
 								<div class="text">
 									<h2 class="name">秘语</h2>
@@ -73,7 +81,7 @@
 							</a>
 						</div>
 						<div class="product-item product-small-item">
-							<img src="./src/img/default.jpg">
+							<img class="lazy" data-original="./src/img/default.jpg" src="./src/img/395x267.jpg">
 							<a href="javascript:void(0);" class="flex-v-c">
 								<div class="text">
 									<h2 class="name">秘语</h2>
@@ -85,7 +93,7 @@
 					<div class="w5"></div>
 					<div class="flex-a-i">
 						<div class="product-item product-small-item">
-							<img src="./src/img/default.jpg">
+							<img class="lazy" data-original="./src/img/default.jpg" src="./src/img/395x267.jpg">
 							<a href="javascript:void(0);" class="flex-v-c">
 								<div class="text">
 									<h2 class="name">秘语</h2>
@@ -94,7 +102,7 @@
 							</a>
 						</div>
 						<div class="product-item product-small-item">
-							<img src="./src/img/default.jpg">
+							<img class="lazy" data-original="./src/img/default.jpg" src="./src/img/395x267.jpg">
 							<a href="javascript:void(0);" class="flex-v-c">
 								<div class="text">
 									<h2 class="name">秘语</h2>
@@ -112,7 +120,7 @@
 				<div class="product-box flex-h">
 					<div class="flex-a-i">
 						<div class="product-item product-small-item">
-							<img src="./src/img/default.jpg">
+							<img class="lazy" data-original="./src/img/default.jpg" src="./src/img/395x267.jpg">
 							<a href="javascript:void(0);" class="flex-v-c">
 								<div class="text">
 									<h2 class="name">秘语</h2>
@@ -121,7 +129,7 @@
 							</a>
 						</div>
 						<div class="product-item product-small-item">
-							<img src="./src/img/default.jpg">
+							<img class="lazy" data-original="./src/img/default.jpg" src="./src/img/395x267.jpg">
 							<a href="javascript:void(0);" class="flex-v-c">
 								<div class="text">
 									<h2 class="name">秘语</h2>
@@ -131,8 +139,9 @@
 						</div>
 					</div>
 					<div class="w5"></div>
+					<!--  大图 -->
 					<div class="product-item product-big-item">
-						<img src="./src/img/default.jpg">
+						<img class="lazy" data-original="./src/img/default.jpg" src="./src/img/800x540.jpg">
 						<a href="javascript:void(0);" class="flex-v-c">
 							<div class="text">
 								<h2 class="name">蜀山奇侠录</h2>
@@ -143,7 +152,7 @@
 					<div class="w5"></div>
 					<div class="flex-a-i">
 						<div class="product-item product-small-item">
-							<img src="./src/img/default.jpg">
+							<img class="lazy" data-original="./src/img/default.jpg" src="./src/img/395x267.jpg">
 							<a href="javascript:void(0);" class="flex-v-c">
 								<div class="text">
 									<h2 class="name">秘语</h2>
@@ -152,7 +161,7 @@
 							</a>
 						</div>
 						<div class="product-item product-small-item">
-							<img src="./src/img/default.jpg">
+							<img class="lazy" data-original="./src/img/default.jpg" src="./src/img/395x267.jpg">
 							<a href="javascript:void(0);" class="flex-v-c">
 								<div class="text">
 									<h2 class="name">秘语</h2>
@@ -171,35 +180,35 @@
 					<div class="avatar-item flex-a-i">
 						<div class="avatar">
 							<span class="circle"></span>
-							<img src="./src/img/avatar.png">
+							<img class="lazy" data-original="./src/img/avatar.png" src="./src/img/220x220.jpg">
 							<p class="name">叶璟萱</p>
 						</div>
 					</div>
 					<div class="avatar-item flex-a-i">
 						<div class="avatar">
 							<span class="circle"></span>
-							<img src="./src/img/avatar.png">
+							<img class="lazy" data-original="./src/img/avatar.png" src="./src/img/220x220.jpg">
 							<p class="name">叶璟萱</p>
 						</div>
 					</div>
 					<div class="avatar-item flex-a-i">
 						<div class="avatar">
 							<span class="circle"></span>
-							<img src="./src/img/avatar.png">
+							<img class="lazy" data-original="./src/img/avatar.png" src="./src/img/220x220.jpg">
 							<p class="name">叶璟萱</p>
 						</div>
 					</div>
 					<div class="avatar-item flex-a-i">
 						<div class="avatar">
 							<span class="circle"></span>
-							<img src="./src/img/avatar.png">
+							<img class="lazy" data-original="./src/img/avatar.png" src="./src/img/220x220.jpg">
 							<p class="name">叶璟萱</p>
 						</div>
 					</div>
 					<div class="avatar-item flex-a-i">
 						<div class="avatar">
 							<span class="circle"></span>
-							<img src="./src/img/avatar.png">
+							<img class="lazy" data-original="./src/img/avatar.png" src="./src/img/220x220.jpg">
 							<p class="name">叶璟萱</p>
 						</div>
 					</div>
@@ -210,9 +219,25 @@
 				<h1 class="title">资讯</h1>
 				<h4 class="tips">Information</h4>
 				<div class="news-box flex-h">
+					<!-- 第一张是大图 -->
 					<div class="news-item">
 						<div class="thumb">
-							<img src="./src/img/default.jpg">
+							<img class="lazy" data-original="./src/img/default.jpg" src="./src/img/530x310.jpg">
+						</div>
+						<div class="text">
+							<div class="text-head">
+								<p>做了17年动画</p>
+								<p>VR端看到变现的机会</p>
+							</div>
+							<div class="text-body">
+								<p>Flash时代过去之后，他在07年创办了娃娃鱼动画这家公司，目标仍旧是做原创动画，跟过去给门户网站做动画类似，反哺这家原创动画公司他另外一家多媒体营销公司。《小米的森林》、《秘语》等都是他们的作品，“这些作品其实关于市场的考虑很少，更多的是我们团队的自我表达”。</p>
+							</div>
+						</div>
+					</div>
+					<!-- 第二张小图开始有额外样式 flex-a-i-->
+					<div class="news-item flex-a-i">
+						<div class="thumb">
+							<img class="lazy" data-original="./src/img/default.jpg" src="./src/img/267x310.jpg">
 						</div>
 						<div class="text">
 							<div class="text-head">
@@ -226,7 +251,7 @@
 					</div>
 					<div class="news-item flex-a-i">
 						<div class="thumb">
-							<img src="./src/img/default.jpg">
+							<img class="lazy" data-original="./src/img/default.jpg" src="./src/img/267x310.jpg">
 						</div>
 						<div class="text">
 							<div class="text-head">
@@ -240,7 +265,7 @@
 					</div>
 					<div class="news-item flex-a-i">
 						<div class="thumb">
-							<img src="./src/img/default.jpg">
+							<img class="lazy" data-original="./src/img/default.jpg" src="./src/img/267x310.jpg">
 						</div>
 						<div class="text">
 							<div class="text-head">
@@ -254,21 +279,7 @@
 					</div>
 					<div class="news-item flex-a-i">
 						<div class="thumb">
-							<img src="./src/img/default.jpg">
-						</div>
-						<div class="text">
-							<div class="text-head">
-								<p>做了17年动画</p>
-								<p>VR端看到变现的机会</p>
-							</div>
-							<div class="text-body">
-								<p>Flash时代过去之后，他在07年创办了娃娃鱼动画这家公司，目标仍旧是做原创动画，跟过去给门户网站做动画类似，反哺这家原创动画公司他另外一家多媒体营销公司。《小米的森林》、《秘语》等都是他们的作品，“这些作品其实关于市场的考虑很少，更多的是我们团队的自我表达”。</p>
-							</div>
-						</div>
-					</div>
-					<div class="news-item flex-a-i">
-						<div class="thumb">
-							<img src="./src/img/default.jpg">
+							<img class="lazy" data-original="./src/img/default.jpg" src="./src/img/267x310.jpg">
 						</div>
 						<div class="text">
 							<div class="text-head">

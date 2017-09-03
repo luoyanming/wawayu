@@ -9,6 +9,8 @@ $(function() {
 				that.bannerSliderInit();
 
 				that.joinusMaskBind();
+
+				that.imgLazyLoadBind();
 			},
 
 			// 鼠标移到导航连接上的动画
@@ -28,6 +30,7 @@ $(function() {
 						return false;
 					}
 
+					nav.removeClass(navClassArr[1]);
 					nav.addClass(classname);
 				});
 
@@ -40,6 +43,7 @@ $(function() {
 					}
 
 					nav.removeClass(classname);
+					nav.addClass(navClassArr[1]);
 				});
 			},
 
@@ -73,6 +77,30 @@ $(function() {
 						maskRecruit.removeClass("mask-show").fadeOut(200);
 					} 
 				});
+			},
+
+			// 图片延迟加载
+			imgLazyLoadBind: function() {
+				if($("img.lazy").length == 0) {
+					return false;
+				}
+
+				var imglazy = $('img.lazy');
+				for(var i = 0; i < imglazy.length; i++) {
+					var $this = imglazy.eq(i),
+						img = new Image(),
+						src = $this.attr('data-original');
+
+					img.src = src;
+
+					that.imgOnload($this, img, src);
+				}
+			},
+
+			imgOnload: function(obj, img, src) {
+				img.onload = function() {
+					obj.attr('src', img.src);
+				}
 			}
 		};
 

@@ -6,7 +6,7 @@
 		<meta name="renderer" content="webkit">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="Cache-Control" content="max-age=86400" />
-		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+		<link rel="shortcut icon" href="./src/img/favicon.ico" type="image/x-icon">
 		<meta name="description" content="">
 		<meta name="keywords" content="">
 		<title>娃娃鱼</title>
@@ -32,12 +32,13 @@
 		</header>
 
 		<section class="picture">
-			<img src="./src/img/default.jpg">
+			<img class="lazy" data-original="./src/img/default.jpg" src="./src/img/1600x500.jpg">
 		</section>
 
 		<main class="main clearfix">
 			<aside class="leftmenu">
 				<ul>
+					<!-- 选中的加样式 current -->
 					<li><a href="./about.html" class="link">关于我们</a></li>
 					<li><a href="./joinus.html" class="link current">加入我们</a></li>
 					<li><a href="./clause.html" class="link">法律条款</a></li>
@@ -142,7 +143,7 @@
 								</div>
 								<div class="clearfix"></div>
 								<button type="submit" class="button-submit">应聘此岗位</button>
-								<!-- <button type="submit" class="button-submit">应聘此岗位</button> -->
+								<!-- <button type="submit" class="button-submit loading">正在提交...</button> -->
 							</form>
 						</div>
 					</div>
