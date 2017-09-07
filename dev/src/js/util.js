@@ -11,6 +11,8 @@ $(function() {
 				that.joinusMaskBind();
 
 				that.imgLazyLoadBind();
+
+				that.inputUploadBind();
 			},
 
 			// 鼠标移到导航连接上的动画
@@ -101,6 +103,21 @@ $(function() {
 				img.onload = function() {
 					obj.attr('src', img.src);
 				}
+			},
+
+			// 文件上传
+			inputUploadBind: function() {
+				if($('.input-upload').length == 0) {
+					return false;
+				}
+
+				var inputUpload = $('.input-upload');
+				inputUpload.change(function() {
+					var $this = $(this),
+						str = ($this.val()).split('\\');
+						
+					$this.parent().parent().find('input[type="text"]').val(str[str.length - 1]);
+				});
 			}
 		};
 

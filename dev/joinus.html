@@ -139,9 +139,28 @@
 								</div>
 								<div class="block-item flex-h">
 									<div><label class="item-title">作品</label></div>
-									<div><input type="text"></div>
+									<div><input type="text" disabled></div>
+									<!-- input-upload 上传按钮 -->
+									<div class="btn-upload">
+										<input type="file" name="file-zuopin" class="input-upload">
+									</div>
+								</div>
+								<div class="block-item flex-h">
+									<div><label class="item-title">简历</label></div>
+									<div><input type="text" disabled></div>
+									<!-- input-upload 上传按钮 -->
+									<div class="btn-upload">
+										<input type="file" name="file-jianli" class="input-upload">
+									</div>
 								</div>
 								<div class="clearfix"></div>
+
+								<!-- 错误信息提示，err-msg不需要隐藏，需要显示错误信息的时候往内部添加 <span>错误信息</span> 即可，需要有span标签； -->
+								<!-- 不需要的时候删除内部span标签即可 -->
+								<div class="err-msg">
+									<!-- <span>投递失败！简历必须为.doc格式！</span> -->
+								</div>
+
 								<button type="submit" class="button-submit">应聘此岗位</button>
 								<!-- <button type="submit" class="button-submit loading">正在提交...</button> -->
 							</form>
